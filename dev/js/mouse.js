@@ -32,7 +32,7 @@ var Mouse = React.createClass({displayName: 'Mouse',
   onMouseMove: function (e) {
     this.setState({
       pos: {
-        x: e.pageX-50 ,
+        x: e.pageX-50,
         y: e.pageY-50
       }
     })
@@ -43,7 +43,7 @@ var Mouse = React.createClass({displayName: 'Mouse',
   onTouchMove: function (e) {
     this.setState({
       pos: {
-         x: e.pageX-50 ,
+         x: e.pageX-50,
         y: e.pageY-50
       }
     })
@@ -62,10 +62,6 @@ var Mouse = React.createClass({displayName: 'Mouse',
         top: this.state.pos.y + 'px',
       }
     }, this.props.children));
-
-
-
-
     }
 });
 
