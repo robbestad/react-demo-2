@@ -32,8 +32,8 @@ var Mouse = React.createClass({
   onMouseMove: function (e) {
     this.setState({
       pos: {
-        x: e.pageX ,
-        y: e.pageY
+        x: e.pageX-50 ,
+        y: e.pageY-50
       }
     })
     e.stopPropagation()
@@ -43,8 +43,8 @@ var Mouse = React.createClass({
   onTouchMove: function (e) {
     this.setState({
       pos: {
-        x: e.pageX ,
-        y: e.pageY
+         x: e.pageX+50 ,
+        y: e.pageY-50
       }
     })
     e.stopPropagation()
@@ -77,8 +77,8 @@ React.renderComponent(Mouse({
         background: 'green',
         color:'white',
         padding: '10px',
-        width: '150px',
-        height: '125px',
+        width: '100px',
+        height: '100px',
         position: 'absolute',
     }
-}, 'Look at me'), document.body);
+}, 'Flytt meg'), document.body);
