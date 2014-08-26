@@ -1,0 +1,11 @@
+{
+    "author": "Sven Anders Robbestad",
+    "name": "Responsive-Demo",
+    "dependencies": {
+    },
+    "extra": {
+         "heroku": {
+            "nginx-includes": ["./.nginx.conf"]
+          }
+     }
+}

@@ -1,0 +1,28 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.625;
+  font-family: 'Roboto', Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+
+* .mouse {
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  background: red;
+  color:white;
+/*  background-color: #cca;
+  display:block;
+  position: fixed;
+  background: green*/
+}
+
+@import 'animate';
