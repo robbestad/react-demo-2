@@ -43,7 +43,7 @@ var Mouse = React.createClass({
   onTouchMove: function (e) {
     this.setState({
       pos: {
-         x: e.pageX+50 ,
+         x: e.pageX-50 ,
         y: e.pageY-50
       }
     })
