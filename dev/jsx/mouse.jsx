@@ -22,6 +22,9 @@ var Mouse = React.createClass({
   componentDidUpdate: function (props, state) {
     //console.log(props);
     document.addEventListener('mousemove', this.onMouseMove);
+    document.addEventListener('touchstart', this.onTouchMove);
+    document.addEventListener('touchend', this.onTouchMove);
+    document.addEventListener('touchcancel', this.onTouchMove);
     document.addEventListener('touchmove', this.onTouchMove);
    /* if (this.state.dragging && !state.dragging) {
       document.addEventListener('mousemove', this.onMouseMove)
