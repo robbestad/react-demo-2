@@ -21,7 +21,8 @@ var Mouse = React.createClass({
   // etc.
   componentDidUpdate: function (props, state) {
     //console.log(props);
-    document.addEventListener('mousemove', this.onMouseMove)
+    document.addEventListener('mousemove', this.onMouseMove);
+    document.addEventListener('touchmove', this.onTouchMove);
    /* if (this.state.dragging && !state.dragging) {
       document.addEventListener('mousemove', this.onMouseMove)
     } else if (!this.state.dragging && state.dragging) {
@@ -38,11 +39,23 @@ var Mouse = React.createClass({
     e.stopPropagation()
     e.preventDefault()
   },
+
+  onTouchMove: function (e) {
+    this.setState({
+      pos: {
+        x: e.pageX ,
+        y: e.pageY
+      }
+    })
+    e.stopPropagation()
+    e.preventDefault()
+  },
   render: function () {
     // transferPropsTo will merge style & other props passed into our
     // component to also be on the child DIV.
     return this.transferPropsTo(React.DOM.div({
       onMouseMove: this.onMouseMove,
+      onTouchMove: this.onTouchMove,
       style: {
         position: 'absolute',
         left: this.state.pos.x + 'px',
